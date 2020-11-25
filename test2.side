@@ -1,0 +1,63 @@
+{
+  "id": "37407d3b-1455-449f-9e3f-cd6cac55e56e",
+  "version": "2.0",
+  "name": "test2",
+  "url": "http://automationpractice.com/index.php",
+  "tests": [{
+    "id": "c0e92aea-2f9a-4497-929b-571e9c88b82a",
+    "name": "test2",
+    "commands": [{
+      "id": "18439f59-762f-48f3-98a7-5473d50f7ece",
+      "comment": "",
+      "command": "open",
+      "target": "http://automationpractice.com/index.php",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "2ad95114-b3e7-4c62-bc79-200acfb52d4e",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1050x708",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "04de353c-b322-4e66-8c5e-d9dd8d17e4b1",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Sign in",
+      "targets": [
+        ["linkText=Sign in", "linkText"],
+        ["css=.login", "css:finder"],
+        ["xpath=//a[contains(text(),'Sign in')]", "xpath:link"],
+        ["xpath=//header[@id='header']/div[2]/div/div/nav/div/a", "xpath:idRelative"],
+        ["xpath=//a[@href='http://automationpractice.com/index.php?controller=my-account']", "xpath:href"],
+        ["xpath=//nav/div/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Sign in')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "a47d8df5-0101-42f4-9a41-3cb7b7649905",
+      "comment": "",
+      "command": "assertText",
+      "target": "id=columns",
+      "targets": [
+        ["id=columns", "id"],
+        ["css=#columns", "css:finder"],
+        ["xpath=//div[@id='columns']", "xpath:attributes"],
+        ["xpath=//div[@id='page']/div[2]/div", "xpath:idRelative"],
+        ["xpath=//body/div/div[2]/div", "xpath:position"]
+      ],
+      "value": "> Authentication\\nAUTHENTICATION\\nThere is 1 error\\nAn email address required.\\nCREATE AN ACCOUNT\\nPlease enter your email address to create an account.\\nEmail address\\nCreate an account\\nALREADY REGISTERED?\\nEmail address\\nPassword\\nForgot your password?\\nSign in"
+    }]
+  }],
+  "suites": [{
+    "id": "50c5850a-debf-4238-b667-b3926d5b3dfb",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["c0e92aea-2f9a-4497-929b-571e9c88b82a"]
+  }],
+  "urls": ["http://automationpractice.com/index.php"],
+  "plugins": []
+}
